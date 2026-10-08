@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-700 flex items-center justify-center">
+
+    <!-- Main Container -->
+    <div class="bg-white p-8 rounded-2xl shadow-2xl w-96">
+
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold text-center text-blue-700 mb-3">
+            College Library Portal
+        </h2>
+
+        <p class="text-center mb-6 text-gray-600">
+            Frequently Asked Questions
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-4">
+            <button
+                class="question w-full text-left p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition">
+                What are the library timings?
+            </button>
+
+            <p class="answer hidden p-3 bg-blue-50 text-gray-700 rounded-b-lg">
+                The library is open from 9:00 AM to 6:00 PM on working days.
+            </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-4">
+            <button
+                class="question w-full text-left p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition">
+                How many books can I issue?
+            </button>
+
+            <p class="answer hidden p-3 bg-blue-50 text-gray-700 rounded-b-lg">
+                Students can issue up to 3 books at a time.
+            </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-4">
+            <button
+                class="question w-full text-left p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition">
+                How long can I keep a book?
+            </button>
+
+            <p class="answer hidden p-3 bg-blue-50 text-gray-700 rounded-b-lg">
+                A book can normally be kept for 14 days.
+            </p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="mb-2">
+            <button
+                class="question w-full text-left p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition">
+                What happens if I return a book late?
+            </button>
+
+            <p class="answer hidden p-3 bg-blue-50 text-gray-700 rounded-b-lg">
+                A small fine may be charged for returning a book after the due date.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Get the answer
+                let answer = question.nextElementSibling;
+
+                // Show / Hide answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
